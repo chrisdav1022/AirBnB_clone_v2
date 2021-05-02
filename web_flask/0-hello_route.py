@@ -4,11 +4,11 @@
 from flask import Flask
 
 
-app = flask(__name__)
+app = Flask(__name__)
 
 
-@app.route('/', strict_slashes=False)
-def hello_HBNB():
+@app.route('/', methods=["GET"], strict_slashes=False)
+def hello():
     """Hello"""
     return "Hello HBNB!"
 
