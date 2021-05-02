@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+
 """Flask start"""
 from flask import Flask
-import flask
+
 
 app = flask(__name__)
+
 
 @app.route('/', strict_slashes=False)
 def hello_HBNB():
