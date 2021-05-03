@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 """start Flask"""
 
@@ -37,6 +38,7 @@ def number(num):
     if type(num) == int:
         return ("{} is a number".format(num))
 
+    
 @app.route("/number_template/<int:num>", methods=["GET"], strict_slashes=False)
 def html(num):
     """page html"""
