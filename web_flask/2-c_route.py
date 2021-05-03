@@ -6,19 +6,19 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route("/", strict_slashes=False)
+@app.route("/", methods=["GET"], strict_slashes=False)
 def index():
     """main page"""
     return "Hello HBNB!"
 
 
-@app.route("/hbnb", strict_slashes=False)
+@app.route("/hbnb", methods=["GET"], strict_slashes=False)
 def hbnb():
     """str"""
     return "HBNB"
 
 
-@app.route('/c/<phrase>', strict_slashes=False)
+@app.route('/c/<phrase>', methods=["GET"], strict_slashes=False)
 def c(phrase):
     """Print c phrases"""
     return 'C {}'.format(phrase.replace('_', ' '))
