@@ -6,32 +6,32 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route("/", strict_slashes=False)
+@app.route("/", methods=["GET"], strict_slashes=False)
 def index():
     """main page"""
     return "Hello HBNB!"
 
 
-@app.route("/hbnb", strict_slashes=False)
+@app.route("/hbnb", methods=["GET"], strict_slashes=False)
 def hbnb():
     """str"""
     return "HBNB"
 
 
-@app.route('/c/<phrase>', strict_slashes=False)
+@app.route('/c/<phrase>', methods=["GET"], strict_slashes=False)
 def c(phrase):
     """Print c phrases"""
     return 'C {}'.format(phrase.replace('_', ' '))
 
 
-@app.route('/python/', strict_slashes=False)
-@app.route('/python/<phrase>', strict_slashes=False)
+@app.route('/python/', methods=["GET"], strict_slashes=False)
+@app.route('/python/<phrase>', methods=["GET"], strict_slashes=False)
 def python(phrase='is cool'):
     """string and is cool"""
     return 'Python {}'.format(phrase.replace('_', ' '))
 
 
-@app.route("/number/<int:num>", strict_slashes=False)
+@app.route("/number/<int:num>", methods=["GET"], strict_slashes=False)
 def number(num):
     """is a number?"""
     if type(num) == int:
