@@ -35,7 +35,7 @@ def python(phrase='is cool'):
 def number(num):
     """is a number?"""
     if type(num) == int:
-        return "{} is a number".format(num)
+        return ("{} is a number".format(num))
 
 @app.route("/number_template/<int:num>", methods=["GET"], strict_slashes=False)
 def html(num):
