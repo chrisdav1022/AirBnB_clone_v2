@@ -1,18 +1,19 @@
 #!/usr/bin/python3
 """start Flask"""
 
+
 from flask import Flask
 
 app = Flask(__name__)
 
 
-@app.route("/", strict_slashes=False)
-def index():
+@app.route("/", methods=["GET"], strict_slashes=False)
+def hello():
     """main page"""
     return "Hello HBNB!"
 
 
-@app.route("/hbnb", strict_slashes=False)
+@app.route("/HBNB", methods=["GET"], strict_slashes=False)
 def hbnb():
     """str"""
     return "HBNB"
