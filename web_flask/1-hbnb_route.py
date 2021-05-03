@@ -4,6 +4,7 @@
 
 from flask import Flask
 
+
 app = Flask(__name__)
 
 
@@ -13,7 +14,7 @@ def hello():
     return "Hello HBNB!"
 
 
-@app.route("/HBNB", methods=["GET"], strict_slashes=False)
+@app.route("/hbnb", methods=["GET"], strict_slashes=False)
 def hbnb():
     """str"""
     return "HBNB"
